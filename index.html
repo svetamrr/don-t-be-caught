@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <title>Don't be a caught</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="modal">
+        <div class="modal-content">
+          <input type="text" id="username" placeholder="Enter your name">
+          <p class="warning">Name is should not be empty</p>
+          <input id="save-button" type="button" value="Save" onclick="saveResult()">
+        </div>
+      </div>
+      <nav>
+        <ul class="primary">
+          <li><a href="">Game</a></li>
+          <li><a href="#rules">Rules</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+        </ul>
+      </nav>
+      <div id="leaderboard" style="color: white;"></div>
+      <div id="screen">
+        <div id="game-area">
+          <div id="timer">Time: <p class="timer-inner">0:00</p></div>
+          <div id="bonus">Bonuses:<p class="bonus-inner">0</p></div>
+          <div id="countdown"><p></p></div>
+        </div>
+        <div id="buttons">
+          <button id="start-game" onclick="startCountdown()">Start game</button>
+          <button id="end-game" onclick="endGame()">Complete the game</button>
+        </div>
+      </div>
+      <div id="rules" style="color: white;">
+        <p>
+          You control a black circle. Squares appear in the certain period of time. 
+          Your goal is to prevent circle from touching squares.
+        </p>
+        <p>Good luck!</p>
+        <div class="rules-img">
+          <img src="img/squares.png" alt="rules">
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
